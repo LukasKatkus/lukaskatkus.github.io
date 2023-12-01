@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <!-- Lukas Katkus, EF-22/2 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="mediaq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container" id="resume-page">
+        <header>
+            <nav class="navbar">
+                <a href="#" class="nav-branding">LUKAS</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">Pradžia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Apie mane</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resume.html" class="nav-link">Aprašymas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacts.html" class="nav-link" class="active">Kontaktai</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                    
+                <div class="social-links">
+                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter" style="color: #8f8f8f;"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram" style="color: #8f8f8f;"></i></i></a>
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook" style="color: #8f8f8f;"></i></a>
+                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin" style="color: #8f8f8f;"></i></a>
+                    <a href="https://github.com/LukasKatkus"><i class="fa-brands fa-github" style="color: #8f8f8f;"></i></a>
+                </div> 
+            </nav>
+        </header>
+        <script src="script.js"></script>
+        <main class="main">
+                <div class="section-intro">
+                    <h2>APRAŠYMAS</h2>
+                    <p>Šioje skiltyje yra mano aprašymas, kurį sudaro labai glaudi informaciją apie mane. Tada mano visos baiktos mokyklos ir įgyti laipsniai. Dešinėje pusėje yra mano darbo praeitis, patirtis įgyta.</p>    
+                </div>
+            <section class="resume">
+            <div class="left-block">
+                <h3>Santrauka</h3>
+                <div class="cv-block">
+                    <h4>Lukas Katkus</h4>
+                    <p>Jaunas ir perspektyvus programuotojas, turintis patirties su Arduino bei žaidimų programavimu. Nebijantis išmėginti naujų dalykų.</p>
+                    <ul>
+                        <li>Gedimino pr. 53, LT-01109 Vilnius, Lietuva</li>
+                        <li>+370 60972852</li>
+                        <li>lukas.katkus@stud.vilniustech.lt</li>
+                    </ul>
+                </div>
+                <h3>Išsilavinimas</h3>
+                <div class="cv-block">
+                    <h4>Vidurinis</h4>
+                    <b>2018-2022</b><br>
+                    <i>Palangos senoji gimnazija, Palanga</i>
+                    <p>Esu baiges 12 klasių ir įgijęs vidurinį išsilavinimą.</p>
+                </div>
+                <div class="cv-block">
+                    <h4>Elektronikos inžinerija, aukštasis</h4>
+                    <b>2022-dabar</b><br>
+                    <i>VILNIUS TECH, Vilnius</i>
+                    <p>Šiuo metu studijuoju elektronikos inžineriją VILNIUS TECH universitete.</p>
+                </div>
+            </div>
+            <div class="right-block">
+                <h3>Profesinė patirtis</h3>
+                <div class="cv-block">    
+                    <h4>NASA inžinierius</h4>
+                    <b>1950-1980</b><br>
+                    <i>300 E St SW, Washington, DC, JAV</i>
+                    <ul>
+                        <li>Lyderiavau NASA Apollo programoje</li>
+                        <li>Padėjau išspresti problemas dėl kelionės į menulį</li>
+                        <li>Prisidėjau prie Saturno raketos modeliavimo bei gamybos</li>
+                        <li>Prižiūrėjau, kad lėšos būtų išleistos pagal poreikį</li>
+                    </ul>
+                </div>
+                <div class="cv-block">
+                    <h4>NASA inžinierius</h4>
+                    <b>2015-2020</b><br>
+                    <i>Tesla Straße 1, 15537 Grünheide, Vokietija</i>
+                    <ul>
+                        <li>Dirbau elektromobilių surinkeju</li>
+                        <li>Lyderiavau naujų ličio baterijų inovacijose</li>
+                        <li>Buvau šios inovacijos komandos vadybininkas</li>
+                        <li>Prisidėjau prie Tesla modelio Y planavimo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+        <button class="print-button" onclick="window.print()">Spausdinti</button>
+        <footer class="footer">
+            <p>&copy; 2023 <strong>Lukas Katkus</strong>. Visos teisės saugomos.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

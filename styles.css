@@ -1,0 +1,488 @@
+:root {
+    --step--2: clamp(0.6669rem, 0.7039rem + -0.0478vw, 0.6944rem);
+    --step--1: clamp(0.8331rem, 0.7751rem + 0.2902vw, 1rem);
+    --step-0: clamp(1rem, 0.8261rem + 0.8696vw, 1.5rem);
+    --step-1: clamp(1.2rem, 0.8348rem + 1.8261vw, 2.25rem);
+    --step-2: clamp(1.44rem, 0.767rem + 3.3652vw, 3.375rem);
+    --step-3: clamp(1.7281rem, 0.5683rem + 5.7989vw, 5.0625rem);
+    --step-4: clamp(2.0738rem, 0.1538rem + 9.6vw, 7.5938rem);
+    --step-5: clamp(2.4881rem, -0.6084rem + 15.4826vw, 11.3906rem);
+  }
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #444444;
+    background-color: #F8F8F8;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem; */
+    width: 100vw;
+    background-color: #E8E8E8;
+    font-family: 'Raleway', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #888888;
+    font-weight: bold;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.75rem;
+}
+.nav-branding{
+    font-size: 2rem;
+    font-weight: lighter;
+    color:#000000;
+}
+.nav-link{
+    transition: 0.3s ease;
+    position: relative;
+}
+.nav-link:hover{
+    color: #222222;
+}
+.nav-link:hover::before {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : -0.5rem;
+    width   : 2rem;
+    border-bottom: 2px solid #34b7a7;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 1.5rem;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000000;
+}
+.social-links{
+    display: flex;
+    gap: 0.5rem;
+}
+.social-links i:hover::before{
+    color: #34b7a7;
+}
+ #contact-page .navbar ul li:nth-child(4) a,
+#resume-page .navbar ul li:nth-child(3) a,
+#about-page .navbar ul li:nth-child(2) a,
+#home-page .navbar ul li:nth-child(1) a{
+    color: #222222;
+}
+#contact-page .navbar ul li:nth-child(4) a::before,
+#resume-page .navbar ul li:nth-child(3) a::before,
+#about-page .navbar ul li:nth-child(2) a::before,
+#home-page .navbar ul li:nth-child(1) a::before {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : -0.5rem;
+    width   : 2rem;
+    border-bottom: 2px solid #34b7a7;
+}
+.home-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-inline: auto;
+    gap: 1.5rem;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 1.5rem;
+    background-image: url('media/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.home-main h1{
+    font-size: var(--step-3);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    
+}
+.home-main p{
+    font-size: var(--step-1);
+    color: #707070;
+}
+.about-button {
+    font-size: var(--step--1);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    background-color: #34b7a7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+.about-button:hover {
+    background-color: #0b8778;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-content: flex-start;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #F8F8F8;
+    margin: 1rem max(1rem,0);
+}
+.main>*{
+    max-width: 81rem;
+    flex: 1 1 100%;
+}
+.footer{
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    background-color: #E8E8E8;
+}
+.about{
+    max-width: 81rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+.section-intro{
+    margin: 2rem 0;
+    text-align: center;
+    line-height: 1.5rem;
+    font-family: "Open Sans",sans-serif;
+    padding: 1rem;
+}
+.section-intro h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section-intro h2::after {
+    content: "";
+    display: block;
+    width: 3.1rem;
+    border-bottom: 3px solid #34b7a7;
+    margin: 10px auto 0;
+}
+.info-with-img{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.my-info{
+    font-size: 1rem;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+    padding: 0 0.5rem;
+    flex: 1;
+}
+.my-info h3{
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.9rem;
+}
+.my-info p{
+    margin: 2rem 0;
+}
+.my-info ul{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 19.5rem);
+    list-style: none;
+    gap: 1rem;
+}
+
+.skills{
+    max-width: 81rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+.skill-bars{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    column-gap: 4rem;
+}
+.skill-bars >* {
+    flex: 1 1 25rem;
+}
+
+.skill-name {
+    font-weight: bolder;
+    font-size: 0.8em;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px; /* Height of the progress bar */
+    background-color: #F0F0F0; /* Default color for the progress bar */
+}
+
+.progress {
+    height: 100%;
+    width: 50%; /* Initial width; half of the progress bar */
+    background-color: #34b7a7;
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.percentage {
+    position: absolute;
+    font-weight: bolder;
+    top: -38px;
+    right: 0;
+    font-size: 0.8em;
+}
+.facts{
+    max-width: 81rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+.fact-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: space-around;
+}
+.fact-list >*{
+    flex: 1 1 16rem;
+}
+.fact{
+    padding: 1rem;
+    height: 7rem;
+}
+.fact span{
+    color: #34b7a7;
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: "Open Sans", sans-serif;
+}
+.fact p{
+    font-size: 0.875rem;
+    font-family: "Raleway", sans-serif ;
+}
+.resume{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 81rem;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    margin: 1rem;
+}
+.resume >*{
+    line-height: 1.7rem;
+    text-align: left;
+    flex: 1 1 50%;
+
+}
+.resume h3{
+    font-family: "Raleway",sans-serif;
+    font-weight: lighter;
+    font-size: 1.625rem;
+    margin: 1.25rem 0;
+}
+.resume h4{
+    font-size: 1.125rem;
+    font-family: "Poppins", sans-serif;
+    color: #1D685F;
+}
+.resume b{
+    margin: 2rem 0;
+    font-family: "Raleway", sans-serif;
+    color: #34b7a7;
+    background-color: #EFFBF9;
+    padding: 0.3rem 1rem;
+}
+.cv-block{
+    position: relative;
+    margin: 0;
+    padding: 0 0 1.5rem 1.5rem;
+    border-left: 2px solid #34b7a7;
+}
+.resume ul{
+    margin: 1rem 0 0;
+    list-style-position: inside;
+}
+.cv-block::after {
+    content: '';
+    position: absolute;
+    top: 0px; /* Adjust this value to position the circle */
+    left: -11px; /* Adjust this value to position the circle */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes a circle */
+    border: 2px solid #34b7a7; /* Adds an empty border to create an empty circle */
+    background-color: white;
+}
+.print-button {
+    display: flex;
+    font-size: var(--step--1);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    background-color: #34b7a7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    margin: 1.5rem auto;
+}
+.print-button:hover{
+    background-color: #0b8778;
+}
+
+.map-container {
+    margin: 1rem;
+    text-align: center;
+}
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .contact-container >*:nth-child(1){
+    flex: 1 1 30%;
+}
+.contact-container >*:nth-child(2){
+    flex: 1 1 70%;
+} */
+.contact-info{
+    flex: 1 1 20rem;
+    text-align: left;
+}
+.contact-info >*{
+    display: flex;
+    height: 3.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.contact-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #dff5f1;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: relative;
+    top: -1rem;
+}
+
+.contact-img:hover {
+    background-color: #a9e8dc;
+}
+.contact-info-text{
+    align-self: center;
+}
+
+.send-message{
+    flex: 1 1 60%;
+}
+.send-message form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.send-message form label {
+    display: none;
+}
+.send-message form input[id="name"],
+.send-message form input[id="email"] {
+    margin: 0.5rem; /* Adjust as needed */
+    min-height: 1.5rem;
+    height: 3rem;
+    width: calc(50% - 1rem); /* 50% width minus margins */
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+.send-message form input[id="subject"] {
+    min-height: 1.5rem;
+    width: 100%;
+    height: 3rem;
+    padding: 0.4rem 0.75rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+.send-message form textarea {
+    min-height: 7.5rem;
+    width: 100%;
+    padding: 0.4rem 0.75rem;
+    margin: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    resize: vertical;
+}
+.send-message form .submit-container {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100%; /* Ensures the button spans the full width */
+}
+.send-message form input[type="submit"] {
+    margin: 1rem;
+    width: 10rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #34b7a7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    line-height: 0;
+}
+.send-message form input[type="submit"]:hover {
+    background-color: #0b8778;
+}
+

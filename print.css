@@ -1,0 +1,14 @@
+@media print {
+    body {
+        font-family: serif;
+    }
+    .nav-links{
+        display: none;
+    }
+    .social-links{
+        display: none;
+    }
+    .print-button{
+        display: none;
+    }
+}
