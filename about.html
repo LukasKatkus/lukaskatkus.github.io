@@ -157,17 +157,21 @@
                     <h2>FORMULĖS IR SVG</h2>
                     <p>Čionais yra kažkokios matematinės funkcijos bei formulės ir šalia taipogi yra SVG nuotraukos!</p>
                     <div class="formula">
-                        $$ Z(u) = \frac{1}{\sqrt{\pi}}\int_{-\infty}^{\infty}{e^{-t^2} dt\over t-iv}=i\int_{0}^{\infty}e^{vt-t^2/4} dt$$
+                        $$ Z(u) = \frac{1}{\sqrt{\pi}}\int_{-\infty}^{\infty}{e^{-t^2} dt\over t-iv}=i\int_{0}^{\infty}e^{-vt-t^2/4} dt$$
                     </div>
-                    <!-- <div class="svg-pvz">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                            <rect x="50" y="0" width="100" height="50" stroke="none" fill="gray"/>
+                    <div class="svg-pvz">
+                        <svg height="300" width="300">
+                            <!-- <rect x="50" y="0" width="100" height="50" stroke="none" fill="gray"/>
                             <ellipse cx="100" cy="50" rx="50" ry="35" stroke="none" fill="gray"/>
                             <ellipse cx="150" cy="30" rx="15" ry="25" stroke="none" fill="gray"/>
                             <rect x="35" y="75" width="130" height="15" stroke="none" fill="gray"/>
-                            <polygon tr1="165 75, 165 60, 175 60"/>
+                            <polygon tr1="165 75, 165 60, 175 60"/> -->
+                            <path d="M100 70 L100 20 L200 20 L200 70" stroke="black" stroke-width="4" fill="none"/>
+                            <path d="M100 70 C100 120, 200 120, 200 70" stroke="black" stroke-width="4" fill="none"/>
+                            <path d="M200 30 C225 30, 225 70, 200 70" stroke="black" stroke-width="4" fill="none"/>
+                            <path d="M50 107.5 L250 107.5 L235 120 L65 120 Z" stroke="black" stroke-width="4" fill="none"/>
                         </svg>
-                    </div> -->
+                    </div>
                 </div>
             </section>
         </main>
