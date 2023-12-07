@@ -50,7 +50,10 @@
         width: 32rem;
     }
 }
-@media(max-width:768px){
+@media(max-width:800px){
+    .user-form{
+        width: 95%;
+    }
     .hamburger{
         display: block;
         order: 1;
@@ -125,6 +128,9 @@
     .send-message form input[id="name"],
     .send-message form input[id="email"] {
         width: 100%; /* Set width to 100% for smaller screens */
+    }
+    form#userInfoForm input[type="text"] {
+        width: 100%;
     }
 }   
 @media all and (max-width: 375px){
