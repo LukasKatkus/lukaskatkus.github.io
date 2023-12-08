@@ -1,8 +1,39 @@
 $(document).ready(function(){
   $('#calendar').fullCalendar({
     locale: 'lt',
+    editable: true,
     selectable: true,
-    selectHelper: true,
+    select: function(start, end, jsEvent, view) {
+      var title = prompt('Įveskite įvykį:');
+      if (title) {
+          var eventData = {
+              title: title,
+              start: start,
+              end: end,
+              allDay: true,
+              color: '#05445e' // Set the color for the new event
+          };
+          $('#calendar').fullCalendar('renderEvent', eventData, true);
+      }
+      $('#calendar').fullCalendar('unselect');
+  },
+    eventClick: function(calEvent, jsEvent, view) {
+        var action = prompt('Ar norite redaguoti ar ištrinti įvykį? (Rašykite "edit" arba "delete")');
+        if (action === 'edit') {
+            var newTitle = prompt('Pakeiskite įvykį:', calEvent.title);
+            if (newTitle) {
+                calEvent.title = newTitle;
+                $('#calendar').fullCalendar('updateEvent', calEvent);
+            }
+        } else if (action === 'delete') {
+            var deleteConfirmation = confirm('Ar jūs tikrai norite ištrinti įvykį?');
+            if (deleteConfirmation) {
+                $('#calendar').fullCalendar('removeEvents', calEvent._id);
+            }
+        } else {
+            alert('Neteisingas prašymas, rašykite "edit" arba "delete".');
+        }
+    },
     header: {
       left: 'month, agendaWeek, agendaDay, list',
       center: 'title',
@@ -31,48 +62,5 @@ $(document).ready(function(){
         cell.css("background", "#d4f1f4");
       }
     },
-    dayClick: function(date, jsEvent, view) {
-      const modal = document.querySelector('#modal');
-      openModal(modal);
-      
-      document.querySelector('[data-add-button]').addEventListener('click', () => {
-        const input = document.querySelector('.modal-body input');
-        const title = input.value.trim();
-        
-        if (title) {
-          const eventData = {
-            title: title,
-            start: date.format(), // Format date as FullCalendar requires
-            allDay: true // Assuming events are all-day events
-          };
-          $('#calendar').fullCalendar('renderEvent', eventData, true);
-          closeModal(document.getElementById('modal'));
-        }
-      });
-    },
   });
-  
-  document.addEventListener('click', function (event) {
-    if (event.target.dataset.closeButton !== undefined) {
-      const modal = event.target.closest('.modal');
-      closeModal(modal);
-    }
-  });
-
-  openModalButtons.forEach(button =>{
-    button.addEventListener('click', ()=> {
-      const modal = document.querySelector(button.dataset.modalTarget)
-      openModal(modal);
-    })
-  });
-
-  function openModal(modal){
-    if(modal == null) return;
-    modal.classList.add('active');
-  }
-
-  function closeModal(modal){
-    if(modal == null) return;
-    modal.classList.remove('active');
-  }
 });
